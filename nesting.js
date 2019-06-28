@@ -51,7 +51,16 @@ var employees = [
 */
 
 //Code Here
-
+function employeeUpdater() {
+  for(let key in employees){
+    if(employees[key].firstName === "Theo"){
+      employees.splice(key, 1)
+    }else if (employees[key].firstName === "Lorie"){
+      employees[key].department = "HR"
+    }
+  }
+  return employees
+}
 
 
 ////////// PROBLEM 2 //////////
@@ -69,7 +78,9 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+function removeDuplicates(arr) {
+  return [...new Set(arr)]
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -97,9 +108,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
-
+var grumpyActivity = cat.catFriends[0].activities[1];
+var fluffy2ndFriend = cat.catFriends[1].name;
 
 
 ////////// PROBLEM 4 //////////
@@ -139,7 +149,13 @@ var myCar = {
 */
 
 //Code Here
-
+function recordCleaner(myCar) {
+  for(let key in myCar.accidents){
+    if (myCar.accidents[key] === atFaultForAccident) {
+      myCar[key].atFaultForAccident = false
+    }
+  }
+}
 
 
 ////////// PROBLEM 5 //////////
